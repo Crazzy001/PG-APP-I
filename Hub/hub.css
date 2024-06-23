@@ -1,0 +1,32 @@
+.glass-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: rgba(37, 54, 70, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.2px);
+    -webkit-backdrop-filter: blur(2.2px);
+    border: 1px solid rgba(37, 54, 70, 0.62);
+    transform: translate(-50%, -50%);
+}
+
+.glassboard-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #add8e6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.glassboard-text h1 {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.glassboard-text h2 {
+    font-size: 1em;
+    font-weight: 100;
+}

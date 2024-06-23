@@ -1,0 +1,41 @@
+/* Pfad: 0playground/Dashboard/I_Chatbox/Eingabeleiste/Button_A/Button_A.css */
+
+.button-a-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button-a {
+    width: 800px;
+    height: 600px;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.element {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+#element1 {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#element2 {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#element3 {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#element4 {
+    background: rgba(0, 0, 0, 0.5);
+}

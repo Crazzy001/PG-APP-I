@@ -1,0 +1,52 @@
+/* Pfad: 0playground/assets/css/playground.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.playground-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#background-layer {
+    background: url('../images/86.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#content-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

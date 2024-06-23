@@ -1,0 +1,14 @@
+version: '3'
+services:
+  playground:
+    image: nginx:latest
+    volumes:
+      - ./0playground:/usr/share/nginx/html:ro
+    ports:
+      - "8080:80"
+    networks:
+      - mad_network
+
+networks:
+  mad_network:
+    driver: bridge
