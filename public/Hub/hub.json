@@ -1,0 +1,12 @@
+{
+  "modules": [
+    {
+      "name": "Button_A",
+      "path": "Dashboard/I_Chatbox/Eingabeleiste/Button_A/Button_A.html"
+    },
+    {
+      "name": "Button_B",
+      "path": "Dashboard/I_Chatbox/Eingabeleiste/Button_B/Button_B.html"
+    }
+  ]
+}
