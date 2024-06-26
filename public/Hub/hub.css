@@ -1,33 +1,56 @@
-.glass-element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 800px;
-    height: 600px;
-    background: rgba(37, 54, 70, 0.26);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2.2px);
-    -webkit-backdrop-filter: blur(2.2px);
-    border: 1px solid rgba(37, 54, 70, 0.62);
-    transform: translate(-50%, -50%);
-}
+/* Pfad/Filename: /mnt/f/MAD_AI/madui/0playground/public/assets/css/hub.css */
 
-.glass-content {
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #background-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('assets/images/86.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  #content-layer {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100%;
+  }
+  
+  .glass-element {
+    position: absolute;
+    top: 5%; /* Oberer Rand verringert */
+    left: 50%;
+    width: 80%;
+    height: 30%; /* Verkleinert auf 1/3 */
+    border: 4pt solid #0d0d1a; /* Dunkelblau (fast schwarz) */
+    background: rgba(173, 216, 230, 0.5); /* Leichtes Blau mit höherer Transparenz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 10px white; /* Glooming-Effekt innen weiß */
+    transform: translate(-50%, -50%);
+  }
+  
+  .glass-content {
+    text-align: center;
+  }
+  
+  .glass-title {
+    font-size: 2em;
+    color: #ffffff;
+  }
+  
+  .glass-subtitle {
+    font-size: 1em;
     color: #add8e6;
-    font-family: 'Poppins', sans-serif;
-}
-
-.glass-title {
-    font-size: 3em;
-    font-weight: 300;
-}
-
-.glass-subtitle {
-    font-size: 1.5em;
-    font-weight: 300;
-}
+  }
+  
