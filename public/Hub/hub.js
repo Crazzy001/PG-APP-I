@@ -1,15 +1,26 @@
+// Pfad/Filename: /mnt/f/MAD_AI/madui/0playground/Hub/hub.js
+
 document.addEventListener('DOMContentLoaded', function() {
+  console.log('Hub loaded and ready');
+
   fetch('Hub/hub.json')
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      return response.json();
+      if (response.headers.get('Content-Type')?.includes('application/json')) {
+        return response.json();
+      } else {
+        throw new Error('Invalid JSON response');
+      }
     })
     .then(data => {
-      data.modules.forEach(module => {
+      const fragment = document.createDocumentFragment();
+
+      const modulePromises = data.modules.map(module => {
         const modulePath = module.path;
-        fetch(modulePath)
+
+        return fetch(modulePath)
           .then(response => {
             if (!response.ok) {
               throw new Error(`HTTP error! Status: ${response.status}`);
@@ -19,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
           .then(html => {
             const div = document.createElement('div');
             div.innerHTML = html;
-            document.getElementById('hub-container').appendChild(div);
+            fragment.appendChild(div);
+
             const script = document.createElement('script');
             script.src = modulePath.replace('.html', '.js');
             document.body.appendChild(script);
@@ -28,6 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error loading module:', error);
           });
       });
+
+      Promise.all(modulePromises)
+        .then(() => {
+          document.getElementById('content-layer').appendChild(fragment);
+        })
+        .catch(error => {
+          console.error('Error loading modules:', error);
+        });
     })
     .catch(error => {
       console.error('Error fetching hub.json:', error);
