@@ -1,24 +1,30 @@
+<!-- Pfad/Filename: /mnt/f/MAD_AI/madui/0playground/public/index.html -->
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playground</title>
-    <link rel="stylesheet" href="assets/css/playground.css">
-    <link rel="stylesheet" href="Hub/hub.css">
-    <script src="assets/js/playground.js" defer></script>
-    <script src="Hub/hub.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/playground.css">
+  <link rel="stylesheet" href="Hub/hub.css">
+  <link rel="icon" href="favicon.ico">
+  <title>Playground</title>
 </head>
 <body>
-    <div class="playground-container">
-        <div class="controls-container">
-            <button id="black-btn">Black</button>
-            <button id="white-btn">White</button>
-            <button id="wallpaper-btn">Wallpaper</button>
-        </div>
-        <div id="hub-container">
-            <!-- Hub/GlassBoard wird hier geladen -->
-        </div>
+  <div id="background-layer"></div>
+  <div id="content-layer">
+    <div id="glassboard" class="glassboard">
+      <!-- Buttons A und B im Glassboard -->
+      <button id="btn-a">Click Me - A</button>
+      <button id="btn-b">Click Me - B</button>
     </div>
+  </div>
+  <!-- Wallpaper Buttons -->
+  <div id="wallpaper-buttons">
+    <button id="btn-black">Black</button>
+    <button id="btn-white">White</button>
+    <button id="btn-wallpaper">Wallpaper</button>
+  </div>
+  <script src="assets/js/playground.js"></script>
+  <script src="Hub/hub.js"></script>
 </body>
 </html>
